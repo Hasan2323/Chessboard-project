@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <title> Chess Borad</title>
+    <style>
+
+        .container {
+            width:930px;
+            margin:auto;
+
+        }
+
+        h1{
+            text-align: center;
+            color: burlywood;
+        }
+
+        body {
+            background:#3B5998;
+        }
+
+
+        td {
+            height:50px;
+            width:50px;
+        }
+
+        table{
+
+            border-collapse:collapse;
+            width: 50%;
+
+        }
+
+        .black{
+            background:black;
+        }
+        .white {
+            background:white;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="container" >
+
+    <table align="center">
+
+
+        <script language="javascript">
+
+            var row= prompt("How many rows: ");
+            var column= prompt("How many columns: ");
+
+            document.write("<h1>Dynamic Chessboard with dimension "+row+"*"+column+"</h1>");
+            document.write("<hr>");
+
+            for (i=1; i<=row; i++){
+                document.write("<tr>");
+                for (j=1; j<=column; j++){
+                    sum = j + i;
+                    if (sum%2==0){
+                        document.write("<td class='black'></td>");
+                    }
+                    else {
+                        document.write("<td class='white'></td>");
+                    }
+                }
+                document.write("</tr>");
+            }
+            
+        </script>
+    </table>
+
+    <br><br><br>
+    <h3 style="color:burlywood; text-align: center;">Thank You!</h3>
+
+</div>
+</body>
+</html>
